@@ -70,6 +70,7 @@ public class App{
         double cost = sc.nextDouble();
         sc.nextLine(); // clear buffer
 
+        //made this a comment if you want to keep this or something
         // if(count <= 0){
         //     patientNames[count] = name;
         //     appointmentDates[count] = date;
