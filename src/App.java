@@ -193,6 +193,7 @@ public class App{
             System.out.println("Appointment added successfully!");     
         }
 
+        is_conflicting = false;
     }
 
 }
