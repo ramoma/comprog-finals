@@ -48,43 +48,24 @@ public class App{
 
         System.out.print("Enter patient name: ");
         String name = sc.nextLine();
-        // patientNames[count] = sc.nextLine();
 
         System.out.print("Enter appointment date (YYYY-MM-DD): ");
-        // appointmentDates[count] = sc.nextLine();
         String date = sc.nextLine();
 
         System.out.print("Enter appointment time (e.g. 10:00 AM): ");
-        // appointmentTimes[count] = sc.nextLine();
         String time = sc.nextLine();
 
         System.out.print("Enter dental service (e.g. Cleaning, Extraction): ");
-        // services[count] = sc.nextLine();
         String service = sc.nextLine();
 
         System.out.print("Enter attending dentist: ");
-        // dentists[count] = sc.nextLine();
         String dentist = sc.nextLine();
 
         System.out.print("Enter service cost: ₱");
-        // costs[count] = sc.nextDouble();
         double cost = sc.nextDouble();
         sc.nextLine(); // clear buffer
 
-        //made this a comment if you want to keep this or something
-        // if(count <= 0){
-        //     patientNames[count] = name;
-        //     appointmentDates[count] = date;
-        //     appointmentTimes[count] = time;
-        //     services[count] = service;
-        //     dentists[count] = dentist;
-        //     count++;
-        //     System.out.println("Appointment added successfully!");
-        // }
-        // else{
-        check_conflicts(date, time, dentist, name, service, cost);
-        // }
-        
+        check_conflicts(date, time, dentist, name, service, cost);      
     }
 
     static void viewAppointments() {
@@ -212,9 +193,6 @@ public class App{
             System.out.println("Appointment added successfully!");     
         }
 
-        //cuz why not
-        is_conflicting = false;
-        
     }
 
 }
