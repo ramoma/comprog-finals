@@ -12,6 +12,7 @@ public class App{
     static String check_date;
     static String check_time;
     static String check_dentist;
+    static boolean is_conflicting;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -192,8 +193,12 @@ public class App{
             check_date = appointmentDates[i];
             check_time = appointmentTimes[i];
             check_dentist =dentists[i];
+            
+            if(date.equals(check_date) && time.equals(check_time) && dentist.equals(check_dentist)){
+                is_conflicting = true;
+            }
         }
-        if(date.equals(check_date) && time.equals(check_time) && dentist.equals(check_dentist)){
+        if(is_conflicting){
             System.out.println("Schedule Conflicts Detected!");
         }
         else{
@@ -204,17 +209,11 @@ public class App{
             dentists[count] = dentist;
             costs[count] = cost;
             count++;
-            System.out.println("Appointment added successfully!");
+            System.out.println("Appointment added successfully!");     
         }
-        //clean thcount variables
-        patientNames[count] = "";
-        appointmentDates[count] = "";
-        appointmentTimes[count] = "";
-        services[count] = "";
-        dentists[count] = "";
-        costs[count] = 0;
-        System.out.println(count);
 
+        //cuz why not
+        is_conflicting = false;
         
     }
 
